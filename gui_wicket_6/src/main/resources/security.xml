@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="http://www.springframework.org/schema/security"  
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=
+		"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+         http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd
+         ">
+
+	<b:bean id="daoAuthenticationProvider"
+ 		class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+  		<b:property name="userDetailsService" ref="userService" />
+	</b:bean>
+
+	<b:bean id="authenticationManager"
+    	class="org.springframework.security.authentication.ProviderManager">
+  		<b:property name="providers">
+    		<b:list>
+      			<b:ref local="daoAuthenticationProvider" />
+   			 </b:list>
+  		</b:property>
+	</b:bean>
+	
+	<authentication-manager>
+  		<authentication-provider user-service-ref="userService">
+    		<!-- <password-encoder hash="md5" /> -->
+  		</authentication-provider>
+	</authentication-manager>
+	
+
+ 	<b:bean id="accessDeniedHandler" class="org.springframework.security.web.access.AccessDeniedHandlerImpl">
+ 		<b:property name="errorPage" value="/register.html"/>
+ 	</b:bean>
+ 	 
+	<http 
+		create-session="never" 
+		auto-config="true">
+		<remember-me />
+		<intercept-url pattern="/**"  />
+	</http>
+	
+	<global-method-security secured-annotations="enabled" />
+</b:beans>

@@ -1,0 +1,499 @@
+
+html {
+   /*color: #0a0a0a;*/
+   height: 100%;
+
+}
+
+body {
+	margin: 0px;
+	font-family: "Trebuchet MS", "Helvetica", "Verdana", "sans-serif";
+}
+
+* {
+	font-size: 0.9em;
+}
+
+
+h1 {
+	font-size: 1.8em !important;
+	font-weight: bold;
+	/*border-bottom: medium #fff solid;*/
+}
+
+
+
+
+div#header {
+    background: url(../images/header.png) no-repeat bottom right;
+    height: 139px;
+    border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	margin-top: 10px;
+	background-color: #24A321;
+	border-left: 1px solid #24A321;
+	border-right: 1px solid #24A321;
+}
+
+div#logonPanel{
+	margin-right: 4px;
+	float: right;
+	
+}
+
+div#menuhead{
+	border-left: 1px solid #24A321;
+	border-right: 1px solid #24A321;
+}
+
+div#footer{
+	height: 40px;
+    border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-color: #24A321;
+	border-left: 1px solid #24A321;
+	border-right: 1px solid #24A321;
+}
+
+div#content{
+	min-height: 400px;
+    border-left: 1px solid #24A321;
+	border-right: 1px solid #24A321;
+	
+}
+div#incontent{
+	padding:5px;
+	
+}
+
+html {
+  /*background-color: #aadba8;*/
+}
+body {
+  /*background-color: #aadba8;*/
+}
+
+div.fberror{
+	border: 2px dashed red;
+	padding: 2px;
+}
+
+table.liste {
+	border: 1px solid gray;
+}
+
+table.liste thead th {
+	border-bottom: 3px solid black;
+	background-color: #24A321;
+}
+
+table.liste  * tr:HOVER {
+	background-color: #1AcB18;
+	border-bottom: 1px solid black;
+	
+}
+
+table.liste * tbody tr {
+	border-bottom: 1px dotted black;
+}
+
+table.liste * tbody td {
+	border-bottom: 1px dotted black;
+}
+
+
+table * .even {
+	background-color: #E3f9FF;
+	/*background-color: #78ECBA;*/
+}
+
+
+/* ========================================
+	A U S R I C H T U N G 
+	U N D
+	G R O E S S E N
+*/
+.fleft{ float: left;}
+.fright { float: right; }
+.clear { clear: both; }
+.width100 {width: 99%;padding-right:1%;}
+.width50 {width: 49%;padding-right:1%;}
+
+/* ========================================
+	I N P U T
+*/ 
+
+input[disabled=disabled] {
+	font-weight: bold;
+	border: none;	
+	background: transparent;
+	/*
+	color: #F1F1F1;	
+	border: 2px solid #f1f1f1;
+	*/
+}
+
+input {
+	border: 2px solid #b0b0b0;
+	border-radius: 3px;
+	background-color: #fff;
+	
+}
+
+input[type="text"], input[type="password"] {
+	height: 17px;
+}
+
+/* ========================================
+	C O N T R O L P A N E L
+*/
+.control{
+	width: 99%;
+	border-radius: 5px;
+	border: 1px solid #b0b0b0;
+	margin-top: 3px;
+	padding-top: 3px;
+	padding-left: 1%;
+	padding-bottom: 3px;
+}
+
+/*
+	S C O U T I N F O 
+*/
+
+div.scoutinfopanel {
+	font-size: 0.9em;
+	background: #DDD;
+	margin: 0.2em 0.2em 0.2em 0.2em;
+}
+
+div.scoutdetailpanel {
+	
+}
+
+
+/* ========================================
+	F I E L D S E T
+*/
+div.formular {
+	/*
+	margin-bottom: 5px;
+	*/
+}
+
+.formular * fieldset {  
+    padding : 15px;  
+    border: 1px solid #B5B8C8;  
+    /*
+    margin-top: 20px;  
+    border-radius: 5px 5px !important;
+    */
+}
+
+.formular * legend {  
+    font-size: 12px;  
+    font-weight: 900;  
+}  
+  
+.formular * fieldset label {  
+    float: left;  
+    text-align: inherit;  
+    width: auto;  
+}  
+  
+.formular * label span {  
+    color: #404040;  
+    display: block;
+}
+
+.formular * input, .formular * select, .formular * textarea {  
+    display : block;  
+    margin-bottom: 5px;  
+}
+
+.formular * span.checkbox, .formular * .checkbox, .formular * label, .formular * span.checkbox input{  
+    /*display: inline; */ 
+}
+
+
+.required:after {
+	/*content:url(../images/exclamation.png);*/
+	content: "*";
+	color: #f1f1f1;
+}
+
+
+/* ========================================
+	F E E D B A C K P A N E L
+*/
+.feedbackPanel {
+	font-size: 1em;
+	font-weight: bold;
+	padding:0.8em;
+	margin-bottom:1em;
+}
+
+.feedbackPanel li{
+	list-style: none;
+	border-width: 3px;
+	border-style: solid;
+	margin-bottom:0.5em;	
+	padding-left: 1em;
+}
+
+li.feedbackPanelERROR, span.feedbackPanelERROR {
+	background:#fbe3e4;
+	color:#8a1f11;
+	border-color:#fbc2c4;	
+}
+
+li.feedbackPanelINFO, span.feedbackPanelINFO {
+	background:#d5edf8;
+	color:#205791;
+	border-color:#92cae4;
+}
+
+li.feedbackPanelWARNING, span.feedbackPanelWARNING{
+	background:#fff6bf;
+	color:#514721;
+	border-color:#ffd324;
+}
+
+li.feedbackPanelSUCCESS, span.feedbackPanelSUCCESS{
+	background:#e6efc2;
+	color:#264409;
+	border-color:#c6d880;
+}
+
+
+li.feedbackPanelERROR * a {
+	color:#8a1f11;
+}
+
+li.feedbackPanelWARNING * a{
+	color:#514721;
+}
+
+li.feedbackPanelINFO * a{
+	color:#205791;
+}
+
+li.feedbackPanelSUCCESS * a{
+	color:#264409;
+}
+
+
+
+/* ========================================
+	F E E D B A C K P A N E L
+	J G R O W L
+*/
+
+.jGrowl {
+	border-style: solid;
+	/*border-width: 4px;*/
+}
+
+.jGrowl div.jgrowl-ERROR {
+ 	background:#fbe3e4 !important;
+ 	color:#8a1f11 !important;
+ 	border-color:#fbc2c4 !important;
+ 	
+}
+.jGrowl div.jgrowl-WARNING {
+ 	background:#fff6bf !important;
+	color:#514721 !important;
+	border-color:#ffd324 !important;
+}
+.jGrowl div.jgrowl-INFO {
+ 	background:#d5edf8 !important;
+	color:#205791 !important;
+	border-color:#92cae4 !important;
+}
+
+.jGrowl div.jgrowl-SUCCESS {
+ 	background:#e6efc2 !important;
+	color:#264409 !important;
+	border-color:#c6d880 !important;
+}
+
+.jGrowl div.jgrowl-message {
+ 	background:#e6efc2 !important;
+	color:#264409 !important;
+	border-color:#c6d880 !important;
+}
+
+/* ========================================
+	A U T O C O M P L E T E
+*/
+div.wicket-aa {
+	font-family: "Lucida Grande","Lucida Sans Unicode",Tahoma,Verdana;
+    font-size: 12px;
+    background-color: white;
+    border-width: 1px;
+    border-color: #cccccc;
+    border-style: solid;
+    padding: 2px;
+    margin: 1px 0 0 0;
+    text-align:left;
+    color: #000;
+}
+div.wicket-aa ul { 
+	list-style:none; 
+	padding: 2px; 
+	margin:0; 
+}
+div.wicket-aa ul li.selected { 
+	background-color: #aaa; 
+	padding: 2px; margin:0; 
+}
+/* ========================================
+	S I T E D E S C
+
+*/
+
+div.sitedesc {
+	border: 1px solid gray;
+	-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px;
+	-moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px; 
+	-moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px;	
+	padding: 5px;
+	font-size: 1.1em;
+	
+}
+
+div.sitedesc * ul {
+	
+	
+}
+
+div.sitedesc * li {
+	list-style: none;
+	font-weight: bold;;
+	
+}
+
+div.sitedesc * li p {
+	margin-left: 30px;
+	font-style: italic;
+}
+
+
+
+
+/*
+ S U P E R F I S H 
+*/
+
+.sf-menu a {
+	border-left:	1px solid #aadba8 !important;
+	border-top:		1px solid #aadba8 !important;
+}
+.sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
+	color:			#black !important;
+}
+.sf-menu li {
+	background:		#24A321 !important;
+}
+.sf-menu li li {
+	background:		#AABDE6;
+}
+.sf-menu li li li {
+	background:		#9AAEDB;
+}
+.sf-menu li:hover, .sf-menu li.sfHover,
+.sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
+	background:		#1AcB18 !important;
+}
+
+.sf-menu li {
+background-color:transparent;
+}
+.sf-menu li li {
+	background-color:transparent;
+}
+.sf-menu li li li {
+	background-color:transparent;
+}
+
+.sf-menu a.current {
+	font-weight: bold;
+	
+}
+
+.buttonSetPanel  .ui-state-active {
+	background: #fdf5ce url(images/ui-bg_glass_100_fdf5ce_1x400.png) 50% 50% repeat-x !important; 
+}
+
+/*
+ T A B P A N E L
+*/
+div.tabpanel div.tab-row ul {
+    height: 20px;
+    margin: 0;
+    padding-left: 10px;
+    background: url( ../images/tabs_bottom.png ) repeat-x bottom;
+}
+
+div.tabpanel div.tab-row li {
+    margin: 0;
+    padding: 0;
+    display: inline;
+    list-style-type: none;
+}
+
+div.tabpanel div.tab-row a:link, div.tabpanel div.tab-row a:visited {
+    float: left;
+    background: #f3f3f3;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: bold;
+    padding: 2px 10px 2px 10px;
+    margin-right: 4px;
+    border: 1px solid #24A321;
+    text-decoration: none;
+    color: #888;
+    
+    -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px;
+	-moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px; 
+}
+
+div.tabpanel div.tab-row li.selected a:link, div.tabpanel div.tab-row a:visited.active {
+    border-bottom: 1px solid #AADBA8;
+    background: #f3f3f3;
+    color: #000;
+}
+
+div.tabpanel div.tab-row a:hover {
+    background: #1AcB18;
+}
+
+div.searchhl * {
+	font-size: 8pt !important;
+}
+
+div.searchhl b {
+	font-weight: bold;
+	background-color: yellow;
+	
+}
+
+/*
+	U I - O V E R L O A D 
+*/
+.ui-accordion .ui-accordion-content {
+	padding: 0.5em 0.3em !important;	
+}
+
+.ui-button {
+	margin-top: 6px !important;
+	height: 21px;
+	padding-bottom: 2px;
+	padding-top: 2px;
+}
+
+.ui-widget {
+	font-size: 1em !important;
+	
+}

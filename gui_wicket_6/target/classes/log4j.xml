@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5.5p %-8.8x %d{HH:mm:ss.SSS} [%t] %c{1} - %m%n" />
+		</layout>
+	</appender>
+
+
+	<logger name="com.cometsoftware" additivity="false">
+    	<level value="info" />
+    	<appender-ref ref="console" />
+    </logger>
+
+<!--
+	<logger name="org.hibernate" additivity="false">
+    	<level value="debug" />
+    	<appender-ref ref="R1" />
+    </logger>
+
+	<logger name="org.hibernate.SQL" additivity="false">
+    	<level value="debug" />
+		<appender-ref ref="console" />
+    	<appender-ref ref="R1" />
+    </logger>
+
+	<logger name="org.hibernate.type" additivity="false">
+    	<level value="trace" />
+		<appender-ref ref="console" />
+    	<appender-ref ref="R1" />
+    </logger>
+-->
+	<root>
+		<priority value="info" />
+		<appender-ref ref="console" />
+	</root>
+
+</log4j:configuration>

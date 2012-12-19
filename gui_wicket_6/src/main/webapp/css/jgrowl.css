@@ -1,0 +1,38 @@
+/* ========================================
+	F E E D B A C K P A N E L
+	J G R O W L
+*/
+
+.jGrowl {
+	border-style: solid;
+	/*border-width: 4px;*/
+}
+
+.jGrowl div.jgrowl-ERROR {
+ 	background:#fbe3e4 !important;
+ 	color:#8a1f11 !important;
+ 	border-color:#fbc2c4 !important;
+ 	
+}
+.jGrowl div.jgrowl-WARNING {
+ 	background:#fff6bf !important;
+	color:#514721 !important;
+	border-color:#ffd324 !important;
+}
+.jGrowl div.jgrowl-INFO {
+ 	background:#d5edf8 !important;
+	color:#205791 !important;
+	border-color:#92cae4 !important;
+}
+
+.jGrowl div.jgrowl-SUCCESS {
+ 	background:#e6efc2 !important;
+	color:#264409 !important;
+	border-color:#c6d880 !important;
+}
+
+.jGrowl div.jgrowl-message {
+ 	background:#e6efc2 !important;
+	color:#264409 !important;
+	border-color:#c6d880 !important;
+}

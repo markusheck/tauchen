@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="http://www.springframework.org/schema/security"  
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=
+		"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+         http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd
+         ">
+
+	<!--
+	<authentication-manager alias="authenticationManager">
+		<authentication-provider>
+			<user-service>
+       			<user name="admin" password="tlbar" authorities="ROLE_USER,ROLE_ADMIN" />
+        		<user name="user1" password="user1" authorities="ROLE_USER" />
+        		<user name="user2" password="user2" authorities="ROLE_USER" />
+        		<user name="oliver.weidner.1" password="comet2012" authorities="ROLE_USER,ROLE_ADMIN" />
+        		<user name="oliver.weidner.2" password="comet2012" authorities="ROLE_USER,ROLE_ADMIN" />
+        		<user name="ulrich.weidner" password="comet2012" authorities="ROLE_USER,ROLE_ADMIN" />
+      		</user-service>
+		</authentication-provider>
+	</authentication-manager>
+	-->
+	
+	<b:bean id="daoAuthenticationProvider"
+ 		class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+  		<b:property name="userDetailsService" ref="userDetailsService" />
+	</b:bean>
+
+	<b:bean id="authenticationManager"
+    	class="org.springframework.security.authentication.ProviderManager">
+  		<b:property name="providers">
+    		<b:list>
+      			<b:ref local="daoAuthenticationProvider" />
+   			 </b:list>
+  		</b:property>
+	</b:bean>
+	
+	<authentication-manager>
+  		<authentication-provider user-service-ref="userDetailsService">
+    		<!-- <password-encoder hash="md5" /> -->
+  		</authentication-provider>
+	</authentication-manager>
+	
+
+ 	<b:bean id="accessDeniedHandler" class="org.springframework.security.web.access.AccessDeniedHandlerImpl">
+ 		<b:property name="errorPage" value="/register.html"/>
+ 	</b:bean>
+ 	<!-- 
+ 	<b:bean id="basicAuthenticationFilter" class="org.springframework.security.web.authentication.www.BasicAuthenticationFilter">
+  		<b:property name="authenticationManager" ref="authenticationManager"/>
+  		<b:property name="authenticationEntryPoint" ref="authenticationEntryPoint"/>
+	</b:bean>
+
+	<b:bean id="authenticationEntryPoint" class="org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint">
+  		<b:property name="realmName" value="Name Of Your Realm"/>
+	</b:bean>
+ 	-->
+ 	 
+	<http 
+		create-session="never" 
+		auto-config="true">
+		<remember-me />
+		<intercept-url pattern="/**"  />
+	</http>
+	
+	<global-method-security secured-annotations="enabled" />
+</b:beans>

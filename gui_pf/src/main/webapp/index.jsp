@@ -1,0 +1,1 @@
+<jsp:forward page="LoginPage.jsf"></jsp:forward> 

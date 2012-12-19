@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.orgdtds.data/wicket-xhtml1.4-strict.dtd">
+<head>
+    <meta charset="utf-8" />
+
+    <title wicket:id="title">Title</title>
+	
+	<wicket:head>
+    </wicket:head>
+	
+	<link rel="stylesheet" href="css/blueprint/screen.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/visualize.css" />
+    <link rel="stylesheet" href="css/datatables.css" />
+    <link rel="stylesheet" href="css/buttons.css" />
+    <link rel="stylesheet" href="css/checkboxes.css" />
+    <link rel="stylesheet" href="css/inputtags.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/jgrowl.css" />
+    <link rel="stylesheet" href="css/tabpanel.css" />
+    <link rel="stylesheet" href="css/scout_base.css" />
+    <link rel="stylesheet" href="css/jquery.jscrollpane.css" />
+    <link rel="stylesheet" href="css/jquery.multiselect.css" />
+    
+    
+  </head>
+<body>
+	<div id="gradient">
+      <div id="stars">
+        <div id="container">        
+                  <header>
+          
+            <!-- Logo -->
+            <h1>Tauchen</h1>
+            <div id="userinfo">
+              <div class="intro">
+                <a class="always" wicket:id="logoutLink"><wicket:message key="logout">Logout</wicket:message></a>
+              </div>
+            </div>
+          </header>
+        
+          <!-- The application "window" -->
+          <div id="application">
+            <div wicket:id="menu"></div>
+            <div id="content">
+            	<wicket:child>
+					CONTENT
+				</wicket:child>
+			</div>
+			
+          </div>
+          <div style="clear: both;" ></div>	
+        </div>
+      </div>
+    </div>
+    
+    <!-- JavaScript -->
+
+    <script src="js/excanvas.js"></script>
+    <script src="js/jquery.livesearch.js"></script>
+    <script src="js/jquery.visualize.js"></script>
+    <script src="js/jquery.datatables.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+    <script src="js/jquery.selectskin.js"></script>
+    <script src="js/jquery.checkboxes.js"></script>
+    <script src="js/jquery.wymeditor.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/jquery.inputtags.js"></script>
+    <script src="js/jquery.formobserver.js"></script>
+    <script src="js/jquery.jscrollpane.min.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/jquery.multiselect.min.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/application.js"></script>
+ </body>
+</html>

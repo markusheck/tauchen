@@ -1,0 +1,110 @@
+
+
+/*
+	S C O U T I N F O 
+*/
+
+div.scoutinfopanel {
+	font-size: 0.8em;
+}
+
+
+div.scoutinfopanel table {
+	padding: 0;
+	background-color: #EEE !important;
+	width: 100%;
+}
+
+
+div.scoutinfopanel table th,td {
+	padding: 1px 1px 1px 1px;
+}
+
+div.scoutinfopanel .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+	background: url(../img/tab_inactive.png) repeat-x #484848;
+	color: #f4f4f4 !important;
+}
+
+
+span.label {
+	margin-top: 6px;
+	margin-bottom: 3px;
+	margin-left: 0.2em;
+	height: 1.2em;
+	display: block;
+}
+
+div.searchhl * {
+	font-size: 8pt !important;
+}
+
+div.searchhl b {
+	font-weight: bold;
+	background-color: yellow;
+	
+}
+
+/*
+ M O D A L  P A N E L
+*/
+div.wicket-modal div.w_caption {
+	height: 2.4em !important;
+}
+
+div.modal-window-button {
+	margin-top: 1em;
+	margin-left: 5px;
+	position: absolute;
+	bottom: 5px;
+	
+}
+
+.ui-accordion .ui-accordion-content{
+	padding: 0 !important;
+	
+}
+
+/* .cmf-skinned-select {
+	display: inline !important;
+}
+ */
+.scoutinfopanel-td {
+	border: 1px solid;
+}
+
+.left {
+	float:left;
+	width:300px;
+}
+
+.right {
+	width:300px;
+}
+
+.ui-panelgrid td {
+    border-color: inherit;
+    border-style: none;
+    border-width: 0px;
+    padding: 4px 10px;
+}
+
+
+.ui-widget-content {
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 0px solid #A8A8A8;
+    color: #4F4F4F;
+}
+
+table {
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 0px solid #CCCCCC;
+    color: #282828;
+    margin-bottom: 16px;
+    padding: 5px;
+    width: 100%;
+}
+
+
+tr {
+    border-bottom: 0px solid #DDDDDD;
+}

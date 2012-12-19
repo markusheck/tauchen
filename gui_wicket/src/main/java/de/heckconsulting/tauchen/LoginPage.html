@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" >
+<head>
+	<meta charset="utf-8" />
+
+    <title>Title</title>
+    
+    <wicket:head>
+    </wicket:head>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/visualize.css" />
+    <link rel="stylesheet" href="css/datatables.css" />
+    <link rel="stylesheet" href="css/buttons.css" />
+    <link rel="stylesheet" href="css/checkboxes.css" />
+    <link rel="stylesheet" href="css/inputtags.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/jgrowl.css" />
+    <link rel="stylesheet" href="css/tabpanel.css" />
+    
+</head>
+<body>
+	<div id="gradient">
+      <div id="stars">
+        <div id="container" class="logincontainer">
+        
+          <header>
+          
+            <!-- Logo -->
+            <h1>Tauchen</h1>
+          
+          </header>
+        
+          <!-- The application "window" -->
+          <div id="application">
+            
+            <!-- The content -->
+            <section id="content">
+
+              <br /><br />
+	<form wicket:id="logonForm">
+		<section>
+			<label for="username"><wicket:message key="username">Username</wicket:message></label>
+
+			<div>
+				<input type="text" name="username" placeholder="Username" class="required" wicket:id="username" />
+			</div>
+		</section>
+
+		<section>
+			<label for="password"><wicket:message key="password">Password</wicket:message></label>
+
+			<div>
+				<input type="password" name="password" id="password" placeholder="Password" class="required" wicket:id="password" /> <br />
+				<br />
+				<input type="submit" wicket:message="value:logonButton" class="button primary" wicket:id="logonButton" /> 
+				<a href="#" class="button"><wicket:message key="cancel">Cancel</wicket:message></a>
+			</div>
+		</section>
+	</form>
+
+            </section>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/excanvas.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.livesearch.js"></script>
+    <script src="js/jquery.visualize.js"></script>
+    <script src="js/jquery.datatables.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+    <script src="js/jquery.selectskin.js"></script>
+    <script src="js/jquery.checkboxes.js"></script>
+    <script src="js/jquery.wymeditor.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/jquery.inputtags.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/application.js"></script>
+</body>
+</html>

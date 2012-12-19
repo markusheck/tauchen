@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"	
+	  xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+
+<h:body>
+    <ui:composition template="./template.xhtml">
+        <ui:define name="content">
+    	<h:form>
+		    <p:outputLabel for="username" value="Username" />
+		    <p:inputText id="username" value="#{loginPageBean.username}" />
+
+		    <p:outputLabel for="password" value="Password" />
+   		    <p:inputText id="password" value="#{loginPageBean.password}" />
+
+		    <p:commandButton value="Login" action="#{loginPageBean.doLogin}" ajax="false"/>
+	    </h:form>
+	    </ui:define>
+	</ui:composition>
+</h:body>
+</html>

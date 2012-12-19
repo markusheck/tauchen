@@ -1,0 +1,60 @@
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+
+<h:body>
+	<ui:composition template="./template.xhtml">
+		<ui:define name="content">
+		    <label for="txtList"> Your Name
+		    	<input type="text" list="names" id="txtList"/>
+		    	<datalist id="names">
+		    		<OPTION value="Andy"/>
+		    		<OPTION value="Andrew"/>
+		    		<OPTION value="Androcles"/>
+		    	</datalist>
+		    </label>
+		    <fieldset id="keygentest" class="background_blue">
+		    	<label for="key">keygen
+		    		<keygen id="key" keytype="rsa" challenge="openSesame"/>
+		    	</label>
+		    	<p><meter min="0" max="10" value="7"></meter></p>
+		    	<label for="rangeInput">Range
+		    		<input id="rangeInput" type="range" min="0" max="10"/>
+		    	</label>
+		    	<label for="dateInput">Date
+		    		<input id="dateInput" type="date"/>
+		    	</label>
+		    	<label for="emailInput">Email
+		    		<input id="emailInput" type="email"/>
+		    	</label>
+		    </fieldset>
+		    <div id="test1">
+		    	<fieldset>
+			    	<label for="key1">keygen1
+		    			<keygen id="key1" keytype="rsa" challenge="openSesame"/>
+		    		</label>
+		    	</fieldset>
+		    </div>
+		    <div id="test2">
+		    	<fieldset>
+			    	<label for="key2">keygen2
+		    			<keygen id="key2" keytype="rsa" challenge="openSesame"/>
+		    		</label>
+		    	</fieldset>
+		    </div>
+		    <div id="test3">
+		    	<fieldset>
+			    	<label for="key3">keygen2
+		    			<keygen id="key3" keytype="rsa" challenge="openSesame"/>
+		    		</label>
+		    	</fieldset>
+		    </div>
+		    <p:inputText type="date"></p:inputText>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

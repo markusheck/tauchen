@@ -1,0 +1,129 @@
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+
+<h:body>
+	<ui:composition template="./template.xhtml">
+		<ui:define name="content">
+		    <p:layout id="layout" style="min-width:400px;min-height:600px;" >
+				<p:layoutUnit position="west" size="200">
+				    <p:accordionPanel value="#{scoutBean.scouts}" var="scouts">
+				        <p:ajax event="tabChange" listener="#{scoutBean.onTabChange}" update=":tabView:scoutName, :tabView:date"/>
+				        <p:tab style="float:left;" title="#{scouts.scoutName}"></p:tab>
+				    </p:accordionPanel>
+				</p:layoutUnit>
+				<p:layoutUnit id="tab" position="center">
+				    <p:tabView id="tabView">
+				        <p:tab id="config" title="Konfiguration">	
+				        <p:panelGrid>
+ 				            <p:row>
+ 				                <p:column><p:outputLabel value="Angelegt am" for="angelegt"></p:outputLabel></p:column>
+ 				                <p:column><p:inputText id="angelegt" value="#{scoutBean.scout.createdAt}"></p:inputText></p:column>
+				                
+ 				            </p:row>
+				            
+				            <p:row>
+				                <p:column><p:outputLabel value="Scout Name" for="scoutName"></p:outputLabel></p:column>
+                                <p:column><p:inputText id="scoutName" value="#{scoutBean.scout.scoutName}"></p:inputText></p:column>
+				            </p:row>
+                            
+                            <p:row>
+ 				                <p:column><p:outputLabel value="Suchtiefe" for="suchtiefe"></p:outputLabel></p:column>
+ 				                <p:column><p:selectOneRadio id="suchtiefe" value="#{scoutBean.scout.crawlDepth}">
+ 				                    <f:selectItem itemLabel="1" itemValue="1"/>
+ 				                    <f:selectItem itemLabel="2" itemValue="2"/>
+ 				                    <f:selectItem itemLabel="3" itemValue="3"/>
+ 				                </p:selectOneRadio></p:column>
+                            </p:row>
+ 				            
+ 				            <p:row>
+				                <p:column><p:outputLabel value="Aktiv" for="aktivCheckbox"></p:outputLabel></p:column>
+				                <p:column><p:selectBooleanCheckbox id="aktivCheckbox" value="#{scoutBean.scout.active}"></p:selectBooleanCheckbox></p:column>
+ 				            </p:row>
+ 				            
+ 				            <p:row>
+				                <p:column><p:outputLabel value="Filtere mehrfache Ergebnisse ueber Titel" for="filter"></p:outputLabel></p:column>
+				                <p:column><p:selectBooleanCheckbox id="filter" value="#{scoutBean.scout.filterDoubleResultsByTitle}"></p:selectBooleanCheckbox></p:column>
+ 				            </p:row>
+
+ 				            <p:row>
+				                <p:column><p:outputLabel value="Nur in gegebenen Domains suchen" for="domain"></p:outputLabel></p:column>
+				                <p:column><p:selectBooleanCheckbox id="domain" value="#{scoutBean.scout.onlyInDomain}"></p:selectBooleanCheckbox></p:column>
+ 				            </p:row>
+				            
+				            <p:row>
+				                <p:column><h:outputLabel value="Gueltigkeitszeitraum"></h:outputLabel></p:column>
+				                <p:column><p:panelGrid>
+				                    <p:row>
+				                        <p:column><p:outputLabel value="Von" for="von"></p:outputLabel></p:column>
+                                        <p:column><p:calendar value="#{scoutBean.scout.validFrom}" id="von" showOn="button" /></p:column>
+				                        <p:column><p:outputLabel value="Bis" for="bis"></p:outputLabel></p:column>
+                                        <p:column><p:calendar value="#{scoutBean.scout.validTo}" id="bis" showOn="button" /></p:column>
+				                    </p:row>
+				                </p:panelGrid></p:column>				                
+				            </p:row>
+				            
+				            <p:row>
+				                <p:column><p:outputLabel value="Zyklus" for="zyklus"></p:outputLabel></p:column>
+ 				                <p:column><p:selectOneRadio id="zyklus" value="#{scoutBean.scout.cycle}">
+ 				                    <f:selectItem itemLabel="1" itemValue="Auf Anforderung"/>
+ 				                    <f:selectItem itemLabel="2" itemValue="Taeglich"/>
+ 				                    <f:selectItem itemLabel="3" itemValue="Periodisch"/>
+ 				                </p:selectOneRadio></p:column>
+				            </p:row>
+				            
+				            <p:row>
+				                <p:column><h:outputLabel value="Tage"></h:outputLabel></p:column>
+				                <p:column><p:panelGrid>
+				                    <p:row>
+				                        <p:column><p:selectBooleanCheckbox value="#{scoutBean.scout.monday}"/></p:column>
+				                        <p:column><h:outputLabel value="Mo"></h:outputLabel></p:column>
+				                        <p:column><p:selectBooleanCheckbox value="#{scoutBean.scout.tuesday}"/></p:column>
+				                        <p:column><h:outputLabel value="Di"></h:outputLabel></p:column>
+				                        <p:column><p:selectBooleanCheckbox value="#{scoutBean.scout.wednesday}"/></p:column>
+				                        <p:column><h:outputLabel value="Mi"></h:outputLabel></p:column>
+				                        <p:column><p:selectBooleanCheckbox value="#{scoutBean.scout.thursday}"/></p:column>
+				                        <p:column><h:outputLabel value="Do"></h:outputLabel></p:column>
+				                        <p:column><p:selectBooleanCheckbox value="#{scoutBean.scout.friday}"/></p:column>
+				                        <p:column><h:outputLabel value="Fr"></h:outputLabel></p:column>
+				                        <p:column><p:selectBooleanCheckbox value="#{scoutBean.scout.saturday}"/></p:column>
+				                        <p:column><h:outputLabel value="Sa"></h:outputLabel></p:column>
+				                        <p:column><p:selectBooleanCheckbox value="#{scoutBean.scout.sunday}"/></p:column>
+				                        <p:column><h:outputLabel value="So"></h:outputLabel></p:column>
+				                    </p:row>
+				                    </p:panelGrid></p:column>
+				                
+				            </p:row>
+				            
+                            <p:row>
+                                <p:column><p:outputLabel value="Jeweils um" for="runAt"></p:outputLabel></p:column>
+                                <p:column><p:inputText id="runAt" value="#{scoutBean.scout.dailyCycleTime}"></p:inputText></p:column>
+                            </p:row>
+				        </p:panelGrid>
+ 				            
+<!-- 
+				            <p:outputLabel value="Zyklus"></p:outputLabel>
+				            <p:outputLabel value="Tage"></p:outputLabel>
+				            <p:outputLabel value="Jeweils um"></p:outputLabel>
+ -->							
+				        </p:tab>
+				        <p:tab id="param" title="Parameter">
+							<p:inputText id="date" value="#{scoutBean.scout.createdAt}"></p:inputText>
+				        </p:tab>
+				        <p:tab id="result" title="Ergebnis">
+							<p:inputText id="date2" value="#{scoutBean.scout.createdAt}"></p:inputText>
+				        </p:tab>
+				        <p:tab id="deleted" title="Geloeschte Eintraege">
+							<p:inputText id="date3" value="#{scoutBean.scout.createdAt}"></p:inputText>
+				        </p:tab>
+				    </p:tabView>
+				</p:layoutUnit>
+		    </p:layout>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

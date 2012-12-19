@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+
+<h:body>
+	<ui:composition template="./template.xhtml">
+		<ui:define name="content">
+		    <h:form id="form">
+		        <h:outputLabel value="Test" />
+		        <p:autoComplete id="test" value="#{stammdatenBean.test}" completeMethod="#{stammdatenBean.complete}"></p:autoComplete>
+		        <br>
+		        <p:calendar id="calendar" value="#{stammdatenBean.date}" showOn="button"></p:calendar>
+		        <br>
+		        
+		        <p:commandButton id="command" actionListener="#{stammdatenBean.submit}" value="Submit"></p:commandButton>
+		    </h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

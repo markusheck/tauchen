@@ -1,0 +1,82 @@
+
+
+/*
+	S C O U T I N F O 
+*/
+
+div.scoutinfopanel {
+	font-size: 0.8em;
+}
+
+
+div.scoutinfopanel table {
+	padding: 0;
+	background-color: #EEE !important;
+	width: 100%;
+}
+
+
+div.scoutinfopanel table th,td {
+	padding: 1px 1px 1px 1px;
+}
+
+div.scoutinfopanel .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+	background: url(../img/tab_inactive.png) repeat-x #484848;
+	color: #f4f4f4 !important;
+}
+
+
+span.label {
+	margin-top: 6px;
+	margin-bottom: 3px;
+	margin-left: 0.2em;
+	height: 1.2em;
+	display: block;
+}
+
+div.searchhl * {
+	font-size: 8pt !important;
+}
+
+div.searchhl b {
+	font-weight: bold;
+	background-color: yellow;
+	
+}
+
+/*
+ M O D A L  P A N E L
+*/
+div.wicket-modal div.w_caption {
+	height: 2.4em !important;
+}
+
+div.modal-window-button {
+	margin-top: 1em;
+	margin-left: 5px;
+	position: absolute;
+	bottom: 5px;
+	
+}
+
+.ui-accordion .ui-accordion-content{
+	padding: 0 !important;
+	
+}
+
+/* .cmf-skinned-select {
+	display: inline !important;
+}
+ */
+.scoutinfopanel-td {
+	border: 1px solid;
+}
+
+.left {
+	float:left;
+	width:300px;
+}
+
+.right {
+	width:300px;
+}
