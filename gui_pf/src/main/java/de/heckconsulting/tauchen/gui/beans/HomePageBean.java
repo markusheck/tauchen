@@ -7,11 +7,15 @@ import java.util.List;
 import javax.faces.bean.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.persistence.TableGenerator;
 
 import org.primefaces.component.tabview.Tab;
 import org.primefaces.event.TabChangeEvent;
 
 import de.heckconsulting.tauchen.core.service.AccordionService;
+
+//@TableGenerator(name="sequence", table="t_generator_table", pkColumnName="PRIMARY_KEY_COLUMN", valueColumnName="VALUE_COLUMN", pkColumnValue="REF_CODE_ID",allocationSize=1,initialValue=1000)
+
 
 @Named
 @SessionScoped

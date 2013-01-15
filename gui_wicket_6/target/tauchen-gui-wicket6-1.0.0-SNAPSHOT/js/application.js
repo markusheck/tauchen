@@ -36,11 +36,11 @@ function loadDefaults() {
    
   $(".datatable").dataTable();
   
-  /**
-   * Datepicker JQuery
-   */
+//  /**
+//   * Datepicker JQuery
+//   */
 //  $( ".datepicker" ).datepicker();
-  
+    
   /**
    * Use search in real-time 
    **/
@@ -166,6 +166,18 @@ function loadDefaults() {
   }
   
   initBackground();
+  
+  $('#menu li ul').css({
+	  display: "none",
+	  left: "auto"
+  });
+  
+  $('#menu li').hover(function() {
+	  $(this).find('ul').stop(true, true).slideDown('fast');
+  },
+  function() {
+	  $(this).find('ul').stop(true, true).fadeOut('fast');
+  });
   
 };
 

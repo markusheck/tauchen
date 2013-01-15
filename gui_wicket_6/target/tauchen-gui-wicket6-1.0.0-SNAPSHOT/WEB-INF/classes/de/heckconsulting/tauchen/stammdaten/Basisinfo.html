@@ -1,9 +1,12 @@
 <wicket:extend>
-        The textfield below will autocomplete country names. It utilizes AutoCompleteTextField in wicket-extensions.<br />
+        The textfield 11below will autocomplete country names. It utilizes AutoCompleteTextField in wicket-extensions.<br />
 	<br />
 
 	<form wicket:id="form">
-		Selected value is: <span wicket:id="selectedValue"></span><br />
-		Country: <input type="text" wicket:id="ac" size="50" />
+		Country: <input id="country" type="text" wicket:id="ac" size="50" />
+	</form>
+	<form wicket:id="form2">
+	    DropDownChoice: <select name="PhoneVendor" wicket:id="testddc"></select>
+	    <input type="button" wicket:id="adjustButton" value="Test123"/>
 	</form>
 </wicket:extend>

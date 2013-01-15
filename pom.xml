@@ -15,6 +15,7 @@
 	    <module>gui_pf</module>
 	    <module>gui_wicket</module>
 	    <module>gui_wicket_6</module>
+	    <module>gui_ee6</module>
 	</modules>
 	
 	<build>
