@@ -2,6 +2,7 @@ package de.heckconsulting.tauchen.db.dao;
 
 import java.util.List;
 
+import javax.annotation.ManagedBean;
 import javax.annotation.PostConstruct;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -16,6 +17,7 @@ import de.heckconsulting.tauchen.db.JpaDAO;
 import de.heckconsulting.tauchen.db.dbo.UserDBO;
 
 @Repository
+@ManagedBean
 public class UserDAO extends JpaDAO<Long, UserDBO> {
 
 	private static final long serialVersionUID = 4846563870487675751L;

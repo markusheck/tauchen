@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+
+<h:head>
+	<title>Title</title>
+
+	<h:outputStylesheet library="css" name="blueprint/screen.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="reset.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="visualize.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="datatables.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="buttons.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="checkboxes.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="inputtags.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="main.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="jgrowl.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="tabpanel.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="jquery.jscrollpane.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="jquery.multiselect.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="scout_base.css"></h:outputStylesheet>
+	
+	<f:facet name="last">
+        <link rel="stylesheet" type="text/css" href="#{facesContext.externalContext.requestContextPath}/resources/css/scout_base.css" />
+    </f:facet> 
+
+</h:head>
+
+<h:body>
+	<div id="gradient">
+		<div id="stars">
+			<div id="container">
+				<header> <!-- Logo -->
+				<h1>Tauchen</h1>
+				</header>
+				<!-- The application "window" -->
+				<div id="application">
+					<div id="menu">
+						<h:form>
+							<p:menubar>
+								<p:menuitem value="Dashboard" url="#" />
+								<p:menuitem value="Scout" url="/restricted/Scout.jsf" />
+								<p:submenu label="Items" icon="ui-icon-contact">
+									<p:menuitem value="New Item" url="#" />
+									<p:separator></p:separator>
+									<p:menuitem value="Open Item" url="#" />
+									<p:separator></p:separator>
+									<p:menuitem value="Knowledge Base" url="#" />
+								</p:submenu>
+
+								<p:submenu label="Stammdaten" icon="ui-icon-document">
+								    <p:menuitem value="Homepage" url="/restricted/HomePage.jsf" icon="ui-icon-close" />
+								    <p:menuitem value="Basisinfo" url="/restricted/Basisinfo.jsf" icon="ui-icon-close" />
+								    <p:separator></p:separator>
+								    <p:menuitem value="Stammdaten" url="/restricted/Stammdaten.jsf" icon="ui-icon-close" />
+									<p:separator></p:separator>
+									<p:menuitem value="Benutzer"></p:menuitem>
+									<p:separator></p:separator>
+									<p:menuitem value="URL-Listen"></p:menuitem>								    
+								</p:submenu>
+
+								<p:menuitem value="Quit" url="/restricted/Logout.jsf" icon="ui-icon-close" />
+							</p:menubar>
+						</h:form>
+					</div>
+					<div id="content">
+						<ui:insert name="content">CONTENT</ui:insert>
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- JavaScript -->
+	<h:outputScript library="js" name="excanvas.js"></h:outputScript>
+	<h:outputScript library="js" name="jquery.livesearch.js"></h:outputScript>
+	<h:outputScript library="js" name="jquery.visualize.js"></h:outputScript>
+	<h:outputScript library="js" name="jquery.datatables.js"></h:outputScript>
+	<h:outputScript library="js" name="jquery.placeholder.js"></h:outputScript>
+	<h:outputScript library="js" name="jquery.selectskin.js"></h:outputScript>
+	<h:outputScript library="js" name="jquery.checkboxes.js"></h:outputScript>
+	<h:outputScript library="js" name="jquery.wymeditor.js"></h:outputScript>
+	<h:outputScript library="js" name="jquery.validate.js"></h:outputScript>
+	<h:outputScript library="js" name="jquery.inputtags.js"></h:outputScript>
+	<h:outputScript library="js" name="jquery.formobserver.js"></h:outputScript>
+	<h:outputScript library="js" name="jquery.jscrollpane.min.js"></h:outputScript>
+	<h:outputScript library="js" name="jquery.mousewheel.js"></h:outputScript>
+	<h:outputScript library="js" name="notifications.js"></h:outputScript>
+	<h:outputScript library="js" name="application.js"></h:outputScript>
+
+</h:body>
+</html>
